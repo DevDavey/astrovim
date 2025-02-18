@@ -12,6 +12,8 @@ return {
             "thumbs.db",
             "node_modules",
             "__pycache__",
+          },
+          hide_by_pattern = {
             "*.meta",
           },
         },
