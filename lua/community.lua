@@ -10,5 +10,6 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.completion.avante-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
+  { import = "astrocommunity.pack.typescript" },
   -- import/override with your plugins folder
 }
