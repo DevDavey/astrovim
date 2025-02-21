@@ -11,6 +11,12 @@ require("lazy").setup({
       update_notifications = true, -- Enable/disable notification about running `:Lazy update` twice to update pinned plugins
     },
   },
+  {
+    "nvzone/typr",
+    dependencies = "nvzone/volt",
+    opts = {},
+    cmd = { "Typr", "TyprStats" },
+  },
   { import = "community" },
   { import = "plugins" },
 } --[[@as LazySpec]], {
