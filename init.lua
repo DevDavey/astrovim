@@ -21,16 +21,6 @@ if vim.fn.has "win32" == 1 then
   vim.cmd [[set shellxquote=]]
   vim.cmd [[set shellxescape=]]
 end
-vim.g.clipboard = {
-  name = "OSC 52",
-  copy = {
-    ["+"] = require("vim.ui.clipboard.osc52").copy "+",
-    ["*"] = require("vim.ui.clipboard.osc52").copy "*",
-  },
-  paste = {
-    ["+"] = require("vim.ui.clipboard.osc52").paste "+",
-    ["*"] = require("vim.ui.clipboard.osc52").paste "*",
-  },
-}
+
 require "lazy_setup"
 require "polish"
