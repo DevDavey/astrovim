@@ -13,7 +13,6 @@ if not pcall(require, "lazy") then
   vim.fn.getchar()
   vim.cmd.quit()
 end
-
 -- Check if the operating system is Windows
 if vim.fn.has "win32" == 1 then
   -- Set the shell to Git Bash
