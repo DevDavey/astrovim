@@ -21,23 +21,30 @@ if vim.fn.has "win32" == 1 then
   vim.cmd [[set shellxquote=]]
   vim.cmd [[set shellxescape=]]
 end
-vim.cmd.clipboard = "unnamedplus"
-function no_paste(reg)
+
+function my_paste(reg)
   return function(lines)
-    -- do nothing!
+    local content = vim.fn.getreg '"'
+    return vim.split(content, "\n")
   end
 end
 
-vim.g.clipboard = {
-  name = "OSC 52",
-  copy = {
-    ["+"] = require("vim.ui.clipboard.osc52").copy "+",
-    ["*"] = require("vim.ui.clipboard.osc52").copy "*",
-  },
-  paste = {
-    ["+"] = no_paste "+",
-    ["*"] = no_paste "*",
-  },
-}
+if os.getenv "SSH_TTY" == nil then
+  vim.o.clipboard = "unnamedplus"
+else
+  vim.o.clipboard = "unnamedplus"
+  vim.g.clipboard = {
+    name = "OSC 52",
+    copy = {
+      ["+"] = require("vim.ui.clipboard.osc52").copy "+",
+      ["*"] = require("vim.ui.clipboard.osc52").copy "*",
+    },
+    paste = {
+      ["+"] = my_paste "+",
+      ["*"] = my_paste "*",
+    },
+  }
+end
+
 require "lazy_setup"
 require "polish"
