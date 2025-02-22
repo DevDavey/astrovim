@@ -21,6 +21,13 @@ if vim.fn.has "win32" == 1 then
   vim.cmd [[set shellxquote=]]
   vim.cmd [[set shellxescape=]]
 end
+vim.cmd.clipboard = "unnamedplus"
+function no_paste(reg)
+  return function(lines)
+    -- do nothing!
+  end
+end
+
 vim.g.clipboard = {
   name = "OSC 52",
   copy = {
@@ -28,8 +35,8 @@ vim.g.clipboard = {
     ["*"] = require("vim.ui.clipboard.osc52").copy "*",
   },
   paste = {
-    ["+"] = require("vim.ui.clipboard.osc52").paste "+",
-    ["*"] = require("vim.ui.clipboard.osc52").paste "*",
+    ["+"] = no_paste "+",
+    ["*"] = no_paste "*",
   },
 }
 require "lazy_setup"
