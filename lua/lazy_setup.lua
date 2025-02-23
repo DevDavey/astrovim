@@ -17,7 +17,14 @@ require("lazy").setup({
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
+    },opts = {
+    strategies = {
+      -- Change the default chat adapter
+      chat = {
+        adapter = "anthropic",
+      },
     },
+  },
   },
   {
     "nvzone/typr",
