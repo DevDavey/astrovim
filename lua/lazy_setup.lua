@@ -12,6 +12,14 @@ require("lazy").setup({
     },
   },
   {
+    "olimorris/codecompanion.nvim",
+    config = true,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+  },
+  {
     "nvzone/typr",
     dependencies = "nvzone/volt",
     opts = {},
