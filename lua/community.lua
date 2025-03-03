@@ -8,8 +8,9 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.cs-omnisharp" },
   { import = "astrocommunity.colorscheme.catppuccin" },
-  { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.completion.blink-cmp" },
+  -- { import = "astrocommunity.completion.supermaven-nvim" },
+  { import = "astrocommunity.completion.copilot-lua" },
   -- import/override with your plugins folder
 }

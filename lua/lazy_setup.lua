@@ -12,21 +12,6 @@ require("lazy").setup({
     },
   },
   {
-    "olimorris/codecompanion.nvim",
-    config = true,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-    },opts = {
-    strategies = {
-      -- Change the default chat adapter
-      chat = {
-        adapter = "anthropic",
-      },
-    },
-  },
-  },
-  {
     "nvzone/typr",
     dependencies = "nvzone/volt",
     opts = {},
