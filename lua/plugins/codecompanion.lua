@@ -1,13 +1,14 @@
 return {
   "olimorris/codecompanion.nvim",
+  enabled = false,
   config = true,
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
   },
   keys = {
-    { "<leader>ccl", "<cmd>CodeCompanion<CR>", desc = "Inline" },
-    { "<leader>ccc", "<cmd>CodeCompanionChat<CR>", desc = "Chat" },
+    { "<leader>k", "<cmd>CodeCompanion<CR>", desc = "Inline" },
+    { "<leader>j", "<cmd>CodeCompanionChat<CR>", desc = "Chat" },
   },
   strategies = {
     chat = {

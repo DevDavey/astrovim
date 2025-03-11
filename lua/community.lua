@@ -12,5 +12,6 @@ return {
   { import = "astrocommunity.completion.blink-cmp" },
   -- { import = "astrocommunity.completion.supermaven-nvim" },
   { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.completion.avante-nvim" },
   -- import/override with your plugins folder
 }
